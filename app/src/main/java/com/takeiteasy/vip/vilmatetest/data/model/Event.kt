@@ -27,7 +27,7 @@ class Event(
         const val PROJECTION_HAS_ALARM_INDEX = 4
 
         const val CALENDAR_SELECTION = Events.CALENDAR_ID + " = ?"
-        const val DATE_RANGE_SELECTION = Events.DTSTART + " >= ? AND " + Events.DTEND + " <= ?"
+        const val DATE_RANGE_SELECTION = Events.DTSTART + " >= ? AND " + Events.DTSTART + " <= ?"
 
         const val SORTING_ORDER = Events.DTSTART + " ASC"
     }

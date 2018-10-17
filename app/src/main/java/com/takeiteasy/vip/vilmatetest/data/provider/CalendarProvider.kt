@@ -41,14 +41,14 @@ class CalendarProvider(private val contentResolver: ContentResolver) {
     @Throws(SecurityException::class)
     fun loadEvents(calendarId: Long): List<Event> {
         val events = arrayListOf<Event>()
-        val startTime = System.currentTimeMillis()
-        val endTime = startTime + TimeUnit.DAYS.toMillis(1)
+        val lowTimeBound = System.currentTimeMillis()
+        val upTimeBound = lowTimeBound + TimeUnit.DAYS.toMillis(1)
 
         val cursor = contentResolver.query(
             Event.CONTENT_URI,
             Event.PROJECTION,
             Event.CALENDAR_SELECTION + " AND " + Event.DATE_RANGE_SELECTION,
-            arrayOf(calendarId.toString(), startTime.toString(), endTime.toString()),
+            arrayOf(calendarId.toString(), lowTimeBound.toString(), upTimeBound.toString()),
             Event.SORTING_ORDER
         )
 
