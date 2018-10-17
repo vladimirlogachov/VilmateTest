@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VilmateTest</string>
+    <string name="can_not_load_primary_calendar">Can\'t load primary calendar.</string>
+    <string name="no_events_text">You have no upcoming events for next 24 hours</string>
+    <string name="remove_reminder">Remove reminder</string>
+    <string name="add_reminder">Add reminder</string>
+    <string name="mandatory_permissions_error">Can\'t proceed without requested permissions granted!</string>
+</resources>

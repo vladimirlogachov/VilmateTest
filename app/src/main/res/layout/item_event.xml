@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="16dp">
+
+    <TextView
+            android:id="@+id/start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:gravity="end"
+            tools:text="17.10.2018\n at 18:30"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            tools:text="Title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/start_date"/>
+
+    <TextView
+            android:id="@+id/organizer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            tools:text="Email"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            app:layout_constraintRight_toRightOf="@+id/title"/>
+
+    <ToggleButton
+            android:id="@+id/reminder_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:textOn="@string/remove_reminder"
+            android:textOff="@string/add_reminder"
+            android:textSize="12sp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            app:layout_constraintTop_toBottomOf="@+id/organizer"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+</android.support.constraint.ConstraintLayout>
